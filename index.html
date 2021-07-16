@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant</title>
+</head>
+<style>
+body
+{
+  min-height: 1000px;
+}  
+  p{
+    font-weight: 300;
+    color:#000;
+  }
+  .banner
+  {
+    position: relative;
+    width: 100%;
+    min-height:100ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(bg.jpeg);
+    background-size: cover;
+  }
+  .banner .content{
+    max-width: 1000px;
+    text-align: center;
+  }
+  .banner .content h2{
+    font-size:5em;
+    color:#fff;
+  }
+  .btn
+  {
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display:inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+  }
+  .btn:hover
+  {
+    letter-spacing: 5px;
+  }
+  header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding:40px 100px;
+    z-index: 10000;
+  display: flex;
+ 
+    align-items:right; 
+    transition: 0.5s; 
+
+  }
+  header.sticky
+  {
+    background:#000;
+    padding: 10px 100px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05)
+  }
+  header .logo
+  {
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+  }
+  header .sticky .logo
+  {
+    color: #fff;
+  }
+  header .logo span{
+
+    color: #ff0157;
+  }
+  header .navigation
+  {
+    position: relative;
+    display: flex;
+  }
+  header .navigation li
+  
+  {
+    list-style: none;
+    margin-left: 30px;
+  
+  }
+  header .navigation li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+  }
+  section{
+    padding: 100px;
+
+  }
+  .row
+  {
+    position: relative;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+  }
+  .row .col50
+  {
+    position: relative;
+    width: 43%;
+  }
+  .title
+  {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+  }
+  .menu .content
+  {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .menu .content .box
+  {
+    width: 350px;
+    margin:50px;
+    border: 10px solid #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0,08); 
+    
+  } 
+  .menu .content .box .imgBx
+  {
+    position: relative;
+    width:100%;
+    height:300px
+  }
+  .menu .content .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  } 
+  
+  .expert .content
+  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+  }
+  .expert .content .box{
+    width: 250px;
+    margin: 15px;
+  }
+  .expert .content .box .imgBx{
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+  .expert .content .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+  }
+  .contact{
+    background: url(3.jpeg);
+    background-size: cover;
+  }
+  .contactform
+  {
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin-top: 50px;
+  }
+  .contactform h3{
+    color: #111;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight:500;
+
+  }
+  .contactform .inputBox
+  {
+    position:relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .contactform .inputBox input,
+  .contactform .inputBox textarea
+  {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize:none;
+  }
+  
+  
+  </style>
+    <body>
+      <header>
+        <a href="#" class="logo">Food<span>.</span></a>
+
+    
+    <ul class="navigation">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Expert</a></li>
+      <li><a href="#">Contact Us</a></li>
+      
+    </ul>
+  </header>
+  <section class="banner" id="banner">
+    <div class="content">
+      <h2>Always Choose Good</h2>
+    
+          <a href="#" class="btn">Our Menu</a>
+    </div>
+  </section>
+  <section class="about" id="about">
+<div class="row">
+  <div class="col50">
+    <h2><span>About US</span></h2>
+    <P>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+       Ullam autem consequuntur vero, ipsam provident eligendi 
+       dicta perspiciatis ipsum sapiente, deserunt similique
+        omnis et illum culpa adipisci, eaque quas quia! Dolor!<br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         Dignissimos, excepturi. Fugit, maxime fugiat optio assumenda ratione 
+         vel atque autem harum facilis quos est cum accusamus rem, 
+        pariatur ea incidunt consequatur!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae reprehenderit dolorum nisi laboriosam repudiandae quidem non, dolor, molestiae 
+        saepe nam soluta voluptate id alias 
+        rerum cumque enim corrupti? Voluptate, pariatur!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod ipsa, perspiciatis praesentium, vero illo saepe quos inventore, placeat nulla
+         illum nostrum quisquam cumque expedita iusto. Pariatur maiores vero fugiat nulla.
+         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam recusandae tenetur illum rerum consequatur enim ducimus voluptatem iste veritatis cupiditate, ullam excepturi impedit aspernatur aperiam neque culpa. At, earum doloribus!
+        
+    </P>
+  </div>
+  <div class="col50">
+    <div class="imgBx">
+      <img src="img1.jpeg" style="padding: 0px 80px;">
+    </div>
+  </div>
+</div>
+  </section>
+  <section class="menu" id="menu">
+    <div class="title">
+      <h2 class="titleText" style="font-size: 40px;">Our<span>M</span>enu</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="content">
+      <div class="box">
+        <div class="imgBx">
+     <img src="menu1.jpeg" >
+        </div>
+        <div class="text" style="font-style:inherit;">
+          <h3>Special Salads</h3>
+        </div>
+        
+
+      </div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <div class="imgBx">
+     <img src="menu2.jpeg">
+        </div>
+        <div class="text" style="font-style:inherit;">
+          <h3>Special Soups</h3>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <div class="imgBx">
+     <img src="menu3.jpeg">
+        </div>
+        <div class="text" style="font-style:inherit;">
+          <h3>Special pasta</h3>
+        </div>
+        
+
+      </div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <div class="imgBx">
+     <img src="menu4.jpeg">
+        </div>
+        <div class="text" style="font-style:inherit;">
+          <h3>Special Spagities</h3>
+        </div>
+        
+
+      </div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <div class="imgBx">
+     <img src="menu5.jpeg">
+        </div>
+        <div class="text" style="font-style:inherit;">
+          <h3>Special Soups</h3>
+        </div>
+        
+
+      </div>
+    </div>
+    <div class="content">
+      <div class="box">
+        <div class="imgBx">
+     <img src="menu6.jpeg">
+        </div>
+        <div class="text" style="font-style:inherit;">
+          <h3>Special Salads</h3>
+        </div>
+        
+
+      </div>
+    </div>
+    <div class="title">
+      <a href="#" class="btn">View All</a>
+    </div>
+  </section>
+     <section class="expert" id="expert">
+       <div class="title">
+         <h2 class="titleText">Our Kitchen <span> E</span>xpert</h2>
+       </div>
+       <div class="content">
+         <div class="box">
+           <div class="imgBx">
+             <img src="exp1.jpeg" alt="">
+           </div>
+         </div>
+       </div>
+       <div class="content">
+        <div class="box">
+          <div class="imgBx">
+            <img src="ex2.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="box">
+          <div class="imgBx">
+            <img src="exp3.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+
+     </section>
+ 
+     <section class="contact" id="contact">
+       <div class="title white">
+         <h2 class="titleText"><spam>C</spam>ontact Us</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+       </div>
+       <div class="contactform">
+         <h3>Send Your Messages</h3>
+         <div class="inputBox">
+           <input type="text" placeholder="Name">
+         </div>
+         <div class="inputBox">
+          <input type="text" placeholder="Email">
+        </div>
+        <div class="inputBox">
+          <textarea placeholder="Name"></textarea>
+        </div>
+        <div class="inputBox">
+          <input type="Submit" value="Send">
+        </div>
+       </div>
+     </section>
+  <script type="text/javascript">
+  window.addEventListener('scroll',function(){
+    const header= document.querySelector('header');
+    header.classList.toggle("sticky",window.scrollY > 0);
+
+  })
+  </script>
+
+</body>
+</html>
